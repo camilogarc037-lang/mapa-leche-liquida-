@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_51299ee3292e12f50206ff21761c4690 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+<h3 align="center" style="font-size:20px;margin:8px 0;">
+<b>Mapa de zonas de producción de leche líquida en Cúcuta</b>
+</h3>
+    
+            <div class="folium-map" id="map_51299ee3292e12f50206ff21761c4690" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_51299ee3292e12f50206ff21761c4690 = L.map(
+                "map_51299ee3292e12f50206ff21761c4690",
+                {
+                    center: [7.9, -72.5],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_509ef78d1539b3716bf47ea1b94d2f62 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_51299ee3292e12f50206ff21761c4690);
+        
+    
+            var marker_a16735cb8852d9e1e32aae1af42838ea = L.marker(
+                [7.9089, -72.5077],
+                {}
+            ).addTo(map_51299ee3292e12f50206ff21761c4690);
+        
+    
+            var icon_35925992db68e6ce642600216e63a21c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_a16735cb8852d9e1e32aae1af42838ea.setIcon(icon_35925992db68e6ce642600216e63a21c);
+        
+    
+        var popup_8c9fa3e20ae6e6e84df5fb86f7608cda = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eaad139be906a5f73af14be8e84e6390 = $(`<div id="html_eaad139be906a5f73af14be8e84e6390" style="width: 100.0%; height: 100.0%;">     <h4>Pasteurizadora La Mejor S.A. - Cúcuta</h4>     <p><b>Dirección:</b> Cl. 7 Nte. #4-33, Pescadero, Cúcuta, Norte de Santander, Colombia</p>     <p><a href="https://www.google.com/maps/search/?api=1&query=Cl.+7+Nte.+%234-33%2C+Pescadero%2C+C%C3%BAcuta%2C+Norte+de+Santander%2C+Colombia" target="_blank">Abrir en Google Maps</a></p>     </div>`)[0];
+            popup_8c9fa3e20ae6e6e84df5fb86f7608cda.setContent(html_eaad139be906a5f73af14be8e84e6390);
+        
+
+        marker_a16735cb8852d9e1e32aae1af42838ea.bindPopup(popup_8c9fa3e20ae6e6e84df5fb86f7608cda)
+        ;
+
+        
+    
+    
+            marker_a16735cb8852d9e1e32aae1af42838ea.bindTooltip(
+                `<div>
+                     Pasteurizadora La Mejor S.A. - Cúcuta
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_4b35d0cfeec3c4bcff75a238bd19c7af = L.circle(
+                [7.9089, -72.5077],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3000, "stroke": true, "weight": 3}
+            ).addTo(map_51299ee3292e12f50206ff21761c4690);
+        
+    
+            var marker_cf94dd34fa827ea27ce8244dbd912a2d = L.marker(
+                [7.912, -72.5058],
+                {}
+            ).addTo(map_51299ee3292e12f50206ff21761c4690);
+        
+    
+            var icon_60758fec2c93ebf63ec6ee903666023f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_cf94dd34fa827ea27ce8244dbd912a2d.setIcon(icon_60758fec2c93ebf63ec6ee903666023f);
+        
+    
+        var popup_3562c9b9d54afc3494cee4e7913e4942 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5d5d1d7af0564836436ae8a0dd493d0a = $(`<div id="html_5d5d1d7af0564836436ae8a0dd493d0a" style="width: 100.0%; height: 100.0%;">     <h4>Freskaleche S.A. - Cúcuta</h4>     <p><b>Dirección:</b> Av. 4 #7 Norte-162, Cúcuta, Norte de Santander, Colombia</p>     <p><a href="https://www.google.com/maps/search/?api=1&query=Av.+4+%237+Norte-162%2C+C%C3%BAcuta%2C+Norte+de+Santander%2C+Colombia" target="_blank">Abrir en Google Maps</a></p>     </div>`)[0];
+            popup_3562c9b9d54afc3494cee4e7913e4942.setContent(html_5d5d1d7af0564836436ae8a0dd493d0a);
+        
+
+        marker_cf94dd34fa827ea27ce8244dbd912a2d.bindPopup(popup_3562c9b9d54afc3494cee4e7913e4942)
+        ;
+
+        
+    
+    
+            marker_cf94dd34fa827ea27ce8244dbd912a2d.bindTooltip(
+                `<div>
+                     Freskaleche S.A. - Cúcuta
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_ed0f77b5b028ab97ff1766e167226c4a = L.circle(
+                [7.912, -72.5058],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3000, "stroke": true, "weight": 3}
+            ).addTo(map_51299ee3292e12f50206ff21761c4690);
+        
+    
+            var marker_e963220c2e9bb9f93a7332018557111f = L.marker(
+                [7.8378, -72.4635],
+                {}
+            ).addTo(map_51299ee3292e12f50206ff21761c4690);
+        
+    
+            var icon_345f1c5ccef595011aab8216bd00af7c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_e963220c2e9bb9f93a7332018557111f.setIcon(icon_345f1c5ccef595011aab8216bd00af7c);
+        
+    
+        var popup_91588cc1dd83cbf9a2fdffc5743c7b1d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_872616ed5c6b3afbeca11ab1007e895f = $(`<div id="html_872616ed5c6b3afbeca11ab1007e895f" style="width: 100.0%; height: 100.0%;">     <h4>Procesadora de Alimentos La Villa S.A.S. - Villa del Rosario</h4>     <p><b>Dirección:</b> Hacienda El Retazo - Vereda El Palmar, La Don Juana-Cúcuta, Villa Del Rosario, Norte de Santander, Colombia</p>     <p><a href="https://www.google.com/maps/search/?api=1&query=Hacienda+El+Retazo+-+Vereda+El+Palmar%2C+La+Don+Juana-C%C3%BAcuta%2C+Villa+Del+Rosario%2C+Norte+de+Santander%2C+Colombia" target="_blank">Abrir en Google Maps</a></p>     </div>`)[0];
+            popup_91588cc1dd83cbf9a2fdffc5743c7b1d.setContent(html_872616ed5c6b3afbeca11ab1007e895f);
+        
+
+        marker_e963220c2e9bb9f93a7332018557111f.bindPopup(popup_91588cc1dd83cbf9a2fdffc5743c7b1d)
+        ;
+
+        
+    
+    
+            marker_e963220c2e9bb9f93a7332018557111f.bindTooltip(
+                `<div>
+                     Procesadora de Alimentos La Villa S.A.S. - Villa del Rosario
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_7766129d2ed8644ed6308226600c3021 = L.circle(
+                [7.8378, -72.4635],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3000, "stroke": true, "weight": 3}
+            ).addTo(map_51299ee3292e12f50206ff21761c4690);
+        
+    
+            var marker_d3a749941f98fbbf8c83045e52c7d699 = L.marker(
+                [7.932, -72.604],
+                {}
+            ).addTo(map_51299ee3292e12f50206ff21761c4690);
+        
+    
+            var icon_f8fa54b4425938f7fbd27b3166499822 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_d3a749941f98fbbf8c83045e52c7d699.setIcon(icon_f8fa54b4425938f7fbd27b3166499822);
+        
+    
+        var popup_8298114362152175de85b42cc151ed53 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_065b85b33aa4454ff8d46c31ec5859d8 = $(`<div id="html_065b85b33aa4454ff8d46c31ec5859d8" style="width: 100.0%; height: 100.0%;">     <h4>Productora lechera (finca) - El Zulia</h4>     <p><b>Dirección:</b> Zona rural, El Zulia, Norte de Santander, Colombia</p>     <p><a href="https://www.google.com/maps/search/?api=1&query=Zona+rural%2C+El+Zulia%2C+Norte+de+Santander%2C+Colombia" target="_blank">Abrir en Google Maps</a></p>     </div>`)[0];
+            popup_8298114362152175de85b42cc151ed53.setContent(html_065b85b33aa4454ff8d46c31ec5859d8);
+        
+
+        marker_d3a749941f98fbbf8c83045e52c7d699.bindPopup(popup_8298114362152175de85b42cc151ed53)
+        ;
+
+        
+    
+    
+            marker_d3a749941f98fbbf8c83045e52c7d699.bindTooltip(
+                `<div>
+                     Productora lechera (finca) - El Zulia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_d6dd17926efc089711c8e28a1d8498d4 = L.circle(
+                [7.932, -72.604],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3000, "stroke": true, "weight": 3}
+            ).addTo(map_51299ee3292e12f50206ff21761c4690);
+        
+</script>
+</html>
